@@ -1,0 +1,175 @@
+body, html {
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+  padding: 0;
+  font-family: 'DIN Next LT Pro';
+  overflow: hidden;
+  color: white;
+}
+
+body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  background: url(../img/eguraldi-bg.svg) top left no-repeat;
+  background-size: cover;
+}
+.weather {
+  width: 492.5px;
+}
+.clock-zone {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  top: 56px;
+  left: 204px;
+  font-size: 105px;
+  line-height: 0.8;
+}
+.clock {
+  font-family: 'DIN Next LT Pro';
+  font-weight: 600;
+  font-style: normal;
+}
+.temp {
+  font-family: 'DIN Next LT Pro';
+  font-weight: 200;
+  font-style: normal;
+  opacity: 0;
+}
+.animated .temp {
+  animation: fadeIn 1.5s forwards;
+}
+.weather-day {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  left: 204px;
+  line-height: 0.9;
+  font-family: 'DIN Next LT Pro';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+  transform: scale(0);
+}
+.animated .weather-day {
+  animation: growUp 1.5s forwards;
+}
+.weather-day.tomorrow {
+  animation-delay: 0.5s;
+}
+.weather-day.next {
+  animation-delay: 1s;
+}
+.today {
+  top: 260px;
+}
+.tomorrow {
+  top: 610px;
+}
+.next {
+  top: 805px;
+}
+.day-icon {
+  position: absolute;
+  left: -200px;
+  top: -50px;
+}
+.bilbao {
+  font-size: 60px;
+}
+.gaur {
+  font-size: 86px;
+}
+.hoy {
+  font-weight: 200;
+  font-size: 75px;
+}
+.today-temp {
+  font-size: 58px;
+}
+.day-name-es {
+  font-weight: 200;
+}
+.map {
+  position: relative;
+  width: 1427.5px;
+  background: url(../img/mapa.svg) center no-repeat;
+  background-size: cover;
+  transform: translateX(1427.5px);
+  animation: rightToLeft 1.5s forwards;
+}
+.loc {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  padding: 70px 0 0 180px;
+  font-family: 'DIN Next LT Pro';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 0.9;
+  transform: scale(0);
+}
+.animated .loc {
+  animation: growUp 1.5s forwards;
+}
+.loc__bilbao {
+  top: 304px;
+  left: 250px;
+  animation-delay: 0.3s;
+}
+.animated .loc__donosti {
+  top: 280px;
+  left: 600px;
+  animation-delay: 0.6s;
+}
+.animated .loc__vitoria {
+  top: 500px;
+  left: 400px;
+  animation-delay: 0.3s;
+}
+.animated .loc__pamplona {
+  top: 500px;
+  left: 700px;
+}
+.loc-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@keyframes rightToLeft {
+  from {
+    transform: translateX(1427.5px);
+  }
+  to {
+    transform: translateX(0);
+  }
+ }
+
+ @keyframes growUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+ }
+
+ @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+ }

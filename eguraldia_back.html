@@ -1,0 +1,65 @@
+
+<html>
+<head>
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="./css/eguraldia.css">
+</head>
+<body>
+  <div class="weather" id="weatherZone">
+    <div class="clock-zone">
+      <span class="clock" id="DigitalCLOCK"></span>
+      <span class="temp" id="currentBilbao"></span>
+    </div>
+    <div class="weather-day today">
+      <img class="day-icon" id="todayIcon" src="">
+      <span class="bilbao">Bilbao</span>
+      <span class="gaur">GAUR</span>
+      <span class="hoy">HOY</span>
+      <span class="today-temp" id="todayMaxTemp"></span>
+      <span class="today-temp" id="todayMinTemp"></span>
+    </div>
+    <div class="weather-day tomorrow">
+      <img class="day-icon" id="tomorrowIcon" src="">
+      <span class="day-name">BIHAR</span>
+      <span class="day-name-es">MAÑANA</span>
+      <span class="day-temp" id="tomorrowMaxTemp"></span>
+      <span class="day-temp" id="tomorrowMinTemp"></span>
+    </div>
+    <div class="weather-day next">
+      <img class="day-icon" id="nextIcon" src="">
+      <span class="day-name">ETZI</span>
+      <span class="day-name-es">PASADO</span>
+      <span class="day-temp" id="nextMaxTemp"></span>
+      <span class="day-temp" id="nextMinTemp"></span>
+    </div>
+  </div>
+  <div class="map" id="mapZone">
+    <div class="loc loc__bilbao">
+      <img class="loc-icon" id="locBilbaoIcon" src="">
+      <span class="loc-max" id="locBilbaoMax"></span>
+      <span class="loc-min" id="locBilbaoMin"></span>
+    </div>
+    <div class="loc loc__donosti">
+      <img class="loc-icon" id="locDonostiIcon" src="">
+      <span class="loc-max" id="locDonostiMax"></span>
+      <span class="loc-min" id="locDonostiMin"></span>
+    </div>
+    <div class="loc loc__vitoria">
+      <img class="loc-icon" id="locGasteizIcon" src="">
+      <span class="loc-max" id="locGasteizMax"></span>
+      <span class="loc-min" id="locGasteizMin"></span>
+    </div>
+    <div class="loc loc__pamplona">
+      <img class="loc-icon" id="locIrunaIcon" src="">
+      <span class="loc-max" id="locIrunaMax"></span>
+      <span class="loc-min" id="locIrunaMin"></span>
+    </div>
+  </div>
+  <script src="./js/clock.js"></script>
+  <script src="./js/eguraldia.js"></script>
+  <script>
+    showTime(false);
+    getNews();
+  </script>
+</body>
+</html>

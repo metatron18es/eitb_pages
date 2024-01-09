@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;800&display=swap');
+
+body, html {
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.ticker {
+  position: fixed;
+  top: 0;
+  width: 5952px;
+  height: 144px;
+  overflow: hidden;
+  padding-left: 100%;
+  box-sizing: content-box;
+	background: linear-gradient(45deg, #006896, #00adf2, #006896, #00ADF2);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+#ticker1 {
+  top: 0;
+  left: 0;
+}
+#ticker2 {
+  top: 144px;
+  transform: translateX(-1920px);
+}
+#ticker3 {
+  top: 288px;
+  transform: translateX(-3840px);
+}
+.clocktime {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 565px;
+  height: 100%;
+  background-color: #C9E0E8;
+  font-size: 135px;
+  line-height: 135px;
+  font-weight: 700;
+  color: #006084;
+  z-index: 2;
+}
+.ticker__items {
+  position: absolute;
+  top: 0;
+  left: 5952px;
+  height: 100%;
+  white-space: nowrap;
+  padding:0;
+  margin: 0;
+  box-sizing: content-box;
+  z-index: 1;
+  transition: left 1s linear;
+}
+.ticker-text {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0 3rem;
+  color: white;
+  font-size: 100px;
+  line-height: 144px;
+  font-weight: 400;
+}
+.ticker-title {
+  height: 100%;
+  padding: 0 3rem;
+  margin-right: 3rem;
+  background-color: #006084;
+  font-weight: 600;
+  color: #C9E0E8;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
