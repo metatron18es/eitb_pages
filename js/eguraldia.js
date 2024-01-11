@@ -5,13 +5,11 @@ function fetchJSON(url) {
 }
 
 function generateList(data) {
-  const list = document.createElement('ul');
-  list.classList.add('map');
+  const list = document.querySelector('.map');
 
   data.forEach(item => {
     const posX = (parseFloat(item.x) * 2) - 100;
     const posY = (parseFloat(item.y) * 2) - 100;
-    console.log(posX, posY);
 
     const li = document.createElement('li');
 
@@ -29,8 +27,6 @@ function generateList(data) {
     li.appendChild(img);
     list.appendChild(li);
   });
-
-  return list;
 }
 
 
@@ -38,8 +34,19 @@ function getWeather() {
   fetchJSON('https://hodeia.eitb.eus/datuak/json/ticker_eguraldia/mapa_eguraldia.json')
     .then(data => {
       const weatherPoints = data.data;
-      console.log(weatherPoints);
       const generatedList = generateList(weatherPoints);
-      document.body.appendChild(generatedList);
     });
+}
+
+function getBilbaoWeather() {
+  fetch('https://api.eitb.eus/api/getInfoData/')
+    .then(res => res.json())
+    .then((res) => {
+      const weather = res.weather.eu;
+      const currentBilbaoTemp = weather.currentWeather.Bilbo.value
+
+      document.querySelector('#currentBilbao').innerHTML = `${currentBilbaoTemp}&deg;`;
+      document.querySelector('.clock_zone').classList.add('show');
+    })
+    .catch( err => console.error(err));
 }

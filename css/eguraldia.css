@@ -38,6 +38,47 @@ ul, li {
   height: 200px;
 }
 
+.clock_zone {
+  position: absolute;
+  top: 0;
+  left: 132px;
+  width: 236px;
+  height: 288px;
+  box-sizing: border-box;
+  background: url(../img/clock_background.png) top left no-repeat;
+  z-index: 1;
+  transform: translateY(-100%);
+  transition: transform .5s;
+}
+.clock_zone.show {
+  transform: translateY(0);
+}
+.title {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  font-family: 'DIN Next LT Pro Regular';
+  font-size: 43.7px;
+  line-height: 34px;
+}
+.clock {
+  position: absolute;
+  top: 168px;
+  left: 20px;
+  font-family: 'DIN Next LT Pro';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 70.84px;
+  line-height: 50px;
+}
+.temp {
+  position: absolute;
+  top: 225px;
+  left: 20px;
+  font-family: 'DIN Next LT Pro Light';
+  font-size: 70.84px;
+  line-height: 50px;
+}
 
 @keyframes growUp {
   from {

@@ -298,3 +298,15 @@
     font-style: italic;
 }
 
+@font-face{
+    font-family: "DIN Next LT Pro Regular";
+    src: url("../fonts/DINNextLTProWeb-Regular.eot");
+    src: url("../fonts/DINNextLTProWeb-Regular.eot?#iefix")format("embedded-opentype"),
+        url("../fonts/DINNextLTProWeb-Regular.woff")format("woff"),
+        url("../fonts/DINNextLTProWeb-Regular.woff2")format("woff2"),
+        url("../fonts/DINNextLTProWeb-Regular.ttf")format("truetype"),
+        url("../fonts/DINNextLTProWeb-Regular.svg#DIN Next LT Pro Regular")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}

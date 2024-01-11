@@ -1,13 +1,21 @@
 <html>
 <head>
+  <link rel="stylesheet" href="./css/fonts.css">
   <link rel="stylesheet" href="./css/eguraldia.css">
 </head>
+  <div class="clock_zone">
+    <div class="title">Eguraldia</div>
+    <div id="DigitalCLOCK" class="clock">09:58</div>
+    <div id="currentBilbao" class="temp"></div>
+  </div>
 <body>
   <ul class="map"></ul>
-
+  <script src="./js/clock.js"></script>
   <script src="./js/eguraldia.js"></script>
   <script>
+    showTime(false);
     getWeather();
+    getBilbaoWeather();
   </script>
 </body>
 </html>
